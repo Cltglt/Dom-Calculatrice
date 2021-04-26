@@ -5,14 +5,16 @@ function testEvent(event){
     screen.textContent += myButton;
     console.log(screen.textContent);
     if (myButton == "=") {
-        let resultat = screen.textContent.length-1;
-        screen.textContent = eval(resultat);
+        display = eval(screen.textContent);
+        screen.textContent = display;
         console.log(screen.textContent);
+        console.log("DISPLAY : " + display)
     } else if (myButton == "AC") {
-        screen.textContent = " ";
+        screen.textContent = "";
     }
 }
 
+let display = "";
 let screen = document.querySelector(".resultat"); 
 let calculatrice = document.querySelector(".container"); 
 
